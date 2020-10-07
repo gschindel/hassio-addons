@@ -22,9 +22,9 @@
     "mqtt_password": "",
     "mqtt_topic": "rtl433[/device][/id]",
     "protocol": [ "-R 100 -R 101" ],
-    "frequency": 319500000,
-    "gain": 60,
-    "frequency_offset": 350
+    "frequency": "",
+    "gain": "",
+    "frequency_offset": ""
   },
   "schema":
   {
@@ -33,8 +33,8 @@
     "mqtt_password": "str",
     "mqtt_topic": "str",
     "protocol": "array",
-    "frequency": "int",
-    "gain": "int",
-    "frequency_offset": "int"
+    "frequency": "str",
+    "gain": "str",
+    "frequency_offset": "str"
    }
 }
