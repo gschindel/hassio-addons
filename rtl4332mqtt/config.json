@@ -14,7 +14,7 @@
     "mqtt_user": "",
     "mqtt_password": "",
     "mqtt_topic": "homeassistant/sensor/currentcost",
-    "protocol": 44
+    "protocol": [ 44 ]
   },
   "schema":
   {
@@ -22,6 +22,6 @@
     "mqtt_user": "str",
     "mqtt_password": "str",
     "mqtt_topic": "str",
-    "protocol": "int"
+    "protocol": "array"
    }
 }
