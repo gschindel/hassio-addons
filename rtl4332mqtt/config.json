@@ -21,7 +21,7 @@
     "mqtt_user": "",
     "mqtt_password": "",
     "mqtt_topic": "rtl433[/device][/id]",
-    "protocol": [ "-R 100 -R 101" ],
+    "protocol": [ "" ],
     "frequency": "",
     "gain": "",
     "frequency_offset": ""
