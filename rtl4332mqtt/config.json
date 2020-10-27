@@ -20,7 +20,7 @@
     "mqtt_host": "hassio.local",
     "mqtt_user": "",
     "mqtt_password": "",
-    "mqtt_topic": "rtl433[/device][/id]",
+    "mqtt_topic": "rtl433[/model][/id]",
     "protocol": "-R 71 -R 12",
     "frequency": "",
     "gain": "",
