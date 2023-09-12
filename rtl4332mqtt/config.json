@@ -25,6 +25,7 @@
     "frequency": "",
     "gain": "",
     "frequency_offset": ""
+    "misc_options": ""
   },
   "schema":
   {
@@ -36,5 +37,6 @@
     "frequency": "str",
     "gain": "str",
     "frequency_offset": "str"
+    "misc_options" : "str"
    }
 }
