@@ -17,6 +17,7 @@ PROTOCOL="$(jq --raw-output '.protocol' $CONFIG_PATH)"
 FREQUENCY="$(jq --raw-output '.frequency' $CONFIG_PATH)"
 GAIN="$(jq --raw-output '.gain' $CONFIG_PATH)"
 OFFSET="$(jq --raw-output '.frequency_offset' $CONFIG_PATH)"
+MISC_OPT="$(jq --raw-output '.misc_options' $CONFIG_PATH)"
 
 # Start the listener with specified options
 echo "Starting RTL_433 with parameters:"
@@ -28,10 +29,12 @@ echo "RTL_433 Protocol =" $PROTOCOL
 echo "RTL_433 Frequency =" $FREQUENCY
 echo "RTL_433 Gain =" $GAIN
 echo "RTL_433 Frequency Offset =" $OFFSET
+echo "RTL_433 Miscellaneous Options =" $MISC_OPT
 
 #set -x  ## uncomment for MQTT logging...
 
-/usr/local/bin/rtl_433 -C customary $FREQUENCY -M time:tz -H 180 -F "mqtt://$MQTT_HOST:1883,user=$MQTT_USER,pass=$MQTT_PASS,events=$MQTT_TOPIC"
+#/usr/local/bin/rtl_433 -C customary $FREQUENCY -M time:tz -H 180 -F "mqtt://$MQTT_HOST:1883,user=$MQTT_USER,pass=$MQTT_PASS,events=$MQTT_TOPIC"
+/usr/local/bin/rtl_433 -C customary $FREQUENCY $MISC_OPT -F "mqtt://$MQTT_HOST:1883,user=$MQTT_USER,pass=$MQTT_PASS,events=$MQTT_TOPIC"
 
 # Below are rtl_433 options and the supported device protocols as of 10/07/2020
 # Official documentation found here: https://triq.org/rtl_433/#building-installation
