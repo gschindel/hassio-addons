@@ -31,7 +31,7 @@ echo "RTL_433 Frequency Offset =" $OFFSET
 
 #set -x  ## uncomment for MQTT logging...
 
-/usr/local/bin/rtl_433 -C customary -F "mqtt://$MQTT_HOST:1883,user=$MQTT_USER,pass=$MQTT_PASS,events=$MQTT_TOPIC"
+/usr/local/bin/rtl_433 -C customary $FREQUENCY -M time:tz -H 180 -F "mqtt://$MQTT_HOST:1883,user=$MQTT_USER,pass=$MQTT_PASS,events=$MQTT_TOPIC"
 
 # Below are rtl_433 options and the supported device protocols as of 10/07/2020
 # Official documentation found here: https://triq.org/rtl_433/#building-installation
